@@ -13,10 +13,12 @@ const copy = () =>
     'source/**.html',
     'source/fonts/**',
     'source/img/**',
-    'source/favicon/**'
+    'source/favicon/**',
+    'source/*.{ico,webmanifest}'
   ], {
     base: 'source',
   })
       .pipe(gulp.dest('build'));
 
 export {copy, copyImages, copySvg};
+
