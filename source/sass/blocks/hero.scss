@@ -24,8 +24,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-top: 409px;
-  margin-bottom: 60px;
+  padding-top: 409px;
+  padding-bottom: 60px;
   visibility: hidden;
   transition: visibility $trans-default;
 
@@ -166,7 +166,7 @@
       content: none;
     }
 
-    .hero__text  {
+    .hero__text {
       position: relative;
       max-width: 90%;
       padding: 0 14px 10px;

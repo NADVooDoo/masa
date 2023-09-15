@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {Menu} from './modules/menu';
 import {getHeroSlider} from './modules/init-hero-swiper';
+import {getProgramsSlider} from './modules/init-programs-swiper';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    getProgramsSlider();
   });
 });
 

@@ -9,10 +9,10 @@ const getHeroSlider = () => {
       fadeEffect: {
         crossFade: true,
       },
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       allowTouchMove: isMobileDevice(),
       pagination: {
         el: '[data-hero-pagination]',

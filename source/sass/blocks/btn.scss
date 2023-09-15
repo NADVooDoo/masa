@@ -84,8 +84,8 @@
     }
 
     svg {
-      color: $color-cerulean-blue;
       transform: rotate(45deg);
+      color: rgba($color-cerulean-blue, 0.7);
     }
   }
 
