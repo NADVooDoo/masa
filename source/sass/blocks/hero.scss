@@ -24,17 +24,17 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 409px;
-  padding-bottom: 60px;
+  margin-top: 409px;
+  margin-bottom: 60px;
   visibility: hidden;
   transition: visibility $trans-default;
 
   @include vp-1199 {
-    padding-top: 676px;
+    padding-top: 652px;
     padding-bottom: 60px;
 
     .hero__header {
-      max-width: calc(97% + 1px);
+      max-width: 97.1%;
       margin: 0;
       padding: 31px 40px 23px;
       font-size: 36px;

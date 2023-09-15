@@ -2533,8 +2533,8 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding-top: 409px;
-  padding-bottom: 60px;
+  margin-top: 409px;
+  margin-bottom: 60px;
   visibility: hidden;
   -webkit-transition: visibility 0.3s ease;
   transition: visibility 0.3s ease;
@@ -2726,12 +2726,12 @@ button,
   }
 
   .hero__content {
-    padding-top: 676px;
+    padding-top: 652px;
     padding-bottom: 60px;
   }
 
   .hero__content .hero__header {
-    max-width: calc(97% + 1px);
+    max-width: 97.1%;
     margin: 0;
     padding: 31px 40px 23px;
     font-size: 36px;
