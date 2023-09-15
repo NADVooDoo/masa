@@ -34,6 +34,18 @@
   clip-path: inset(100%);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay-pearl;
+  opacity: 0;
+  z-index: -90;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .scroll-lock-ios {
   position: fixed;
 
