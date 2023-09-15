@@ -5,10 +5,6 @@ const getHeroSlider = () => {
   if (document.querySelector('[data-hero-slider]')) {
     return new Swiper('[data-hero-slider]', {
       loop: true,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
