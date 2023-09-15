@@ -5,24 +5,26 @@
 }
 
 @mixin hover {
-  @media (hover: hover) {
-    &:hover {
-      @content;
-    }
+  &:hover:not([disabled]) {
+    @content;
   }
 }
 
 @mixin focus {
-  &.focus-visible:focus {
+  &:focus-visible:not([disabled]) {
+    @content;
+  }
+}
+
+@mixin focus-within {
+  &:focus-within:not([disabled]) {
     @content;
   }
 }
 
 @mixin active {
-  @media (hover: hover) {
-    &:active {
-      @content;
-    }
+  &:active:not([disabled]) {
+    @content;
   }
 }
 
@@ -42,13 +44,23 @@
   }
 }
 
-@mixin focus-active {
-  @include focus {
+@mixin hover-focus-within {
+  @include hover {
     @content;
   }
 
-  @include active {
+  @include focus-within {
     @content;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

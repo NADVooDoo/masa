@@ -5,6 +5,7 @@ const getHeroSlider = () => {
   if (document.querySelector('[data-hero-slider]')) {
     return new Swiper('[data-hero-slider]', {
       loop: true,
+      speed: 300,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,

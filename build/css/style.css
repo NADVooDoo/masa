@@ -1285,6 +1285,26 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: "Manrope";
   src: url("../fonts/manrope-regular.woff2") format("woff2"), url("../fonts/manrope-regular.woff") format("woff");
@@ -1505,6 +1525,7 @@ button,
   z-index: -90;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .scroll-lock-ios {
@@ -1593,20 +1614,52 @@ button,
   stroke-width: 1px;
 }
 
-.button.focus-visible:focus {
+.button:hover:not([disabled]) {
   background-color: #316dc2;
   color: #ffffff;
 }
 
-.button.focus-visible:focus::before {
+.button:hover:not([disabled])::before {
   background-color: #ffffff;
 }
 
-.button.focus-visible:focus svg {
+.button:hover:not([disabled]) svg {
   color: #316dc2;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.button:focus-visible:not([disabled]) {
+  background-color: #316dc2;
+  color: #ffffff;
+}
+
+.button:focus-visible:not([disabled])::before {
+  background-color: #ffffff;
+}
+
+.button:focus-visible:not([disabled]) svg {
+  color: #316dc2;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button:active:not([disabled]) {
+  background-color: #316dc2;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button:active:not([disabled])::before {
+  background-color: #ffffff;
+}
+
+.button:active:not([disabled]) svg {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: rgba(49, 109, 194, 0.7);
 }
 
 .button[disabled] {
@@ -1663,17 +1716,49 @@ button,
   stroke-width: 1px;
 }
 
-.button-arrow.focus-visible:focus {
+.button-arrow:hover:not([disabled]) {
   background-color: #316dc2;
   color: #ffffff;
 }
 
-.button-arrow.focus-visible:focus::before {
+.button-arrow:hover:not([disabled])::before {
   background-color: #ffffff;
 }
 
-.button-arrow.focus-visible:focus svg {
+.button-arrow:hover:not([disabled]) svg {
   color: #316dc2;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button-arrow:focus-visible:not([disabled]) {
+  background-color: #316dc2;
+  color: #ffffff;
+}
+
+.button-arrow:focus-visible:not([disabled])::before {
+  background-color: #ffffff;
+}
+
+.button-arrow:focus-visible:not([disabled]) svg {
+  color: #316dc2;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button-arrow:active:not([disabled]) {
+  background-color: #316dc2;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button-arrow:active:not([disabled])::before {
+  background-color: #ffffff;
+}
+
+.button-arrow:active:not([disabled]) svg {
+  color: rgba(49, 109, 194, 0.7);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1725,8 +1810,16 @@ button,
   transform: rotate(180deg);
 }
 
-.arrow.focus-visible:focus {
+.arrow:hover:not([disabled]) {
   background-color: #ffffff;
+}
+
+.arrow:focus-visible:not([disabled]) {
+  background-color: #ffffff;
+}
+
+.arrow:active:not([disabled]) {
+  color: rgba(49, 109, 194, 0.7);
 }
 
 .arrow[disabled] {
@@ -2373,8 +2466,16 @@ button,
   transition: all 0.3s ease;
 }
 
-.header__logo.focus-visible:focus {
+.header__logo:hover:not([disabled]) {
   opacity: 0.7;
+}
+
+.header__logo:focus-visible:not([disabled]) {
+  opacity: 0.7;
+}
+
+.header__logo:active:not([disabled]) {
+  opacity: 0.2;
 }
 
 .header__logo-image {
@@ -2422,10 +2523,32 @@ button,
   transition: all 0.3s ease;
 }
 
+.header__menu:hover:not([disabled]) {
+  color: #ffffff;
+  background-color: #316dc2;
+}
+
+.header__menu:hover:not([disabled]) .header__menu-circle {
+  background-color: #ffffff;
+}
+
+.header__menu:hover:not([disabled]) .header__menu-circle::before {
+  border-color: #316dc2;
+}
+
+.header__menu:hover:not([disabled]) .header__menu-circle::after {
+  background-color: #316dc2;
+}
+
 .header.is-open .header__menu {
   background-color: #316dc2;
   color: #ffffff;
   width: 286px;
+}
+
+.header.is-open .header__menu:hover:not([disabled]) {
+  color: #316dc2;
+  background-color: #ffffff;
 }
 
 .header.is-open .header__menu:hover .header__menu-circle {
@@ -2501,6 +2624,10 @@ button,
   background-color: #ffffff;
 }
 
+.header__menu-circle:hover:not([disabled]) {
+  background-color: #316dc2;
+}
+
 .nav {
   z-index: 3;
   display: block;
@@ -2556,7 +2683,11 @@ button,
   right: 0;
 }
 
-.nav__link.focus-visible:focus {
+.nav__link:hover:not([disabled]) {
+  color: #ffffff;
+}
+
+.nav__link:focus-visible:not([disabled]) {
   color: #ffffff;
 }
 
@@ -2600,7 +2731,11 @@ button,
   color: rgba(255, 255, 255, 0.9);
 }
 
-.nav__subnav-list .nav__link.focus-visible:focus {
+.nav__subnav-list .nav__link:hover:not([disabled]) {
+  color: #ffffff;
+}
+
+.nav__subnav-list .nav__link:focus-visible:not([disabled]) {
   color: #ffffff;
 }
 
@@ -3681,126 +3816,12 @@ button,
 }
 
 @media (hover: hover) {
-  .button:hover {
-    background-color: #316dc2;
-    color: #ffffff;
-  }
-
-  .button:hover::before {
-    background-color: #ffffff;
-  }
-
-  .button:hover svg {
-    color: #316dc2;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .button:active {
-    background-color: #316dc2;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .button:active::before {
-    background-color: #ffffff;
-  }
-
-  .button:active svg {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    color: rgba(49, 109, 194, 0.7);
-  }
-
-  .button-arrow:hover {
-    background-color: #316dc2;
-    color: #ffffff;
-  }
-
-  .button-arrow:hover::before {
-    background-color: #ffffff;
-  }
-
-  .button-arrow:hover svg {
-    color: #316dc2;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .button-arrow:active {
-    background-color: #316dc2;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .button-arrow:active::before {
-    background-color: #ffffff;
-  }
-
-  .button-arrow:active svg {
-    color: rgba(49, 109, 194, 0.7);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .arrow:hover {
-    background-color: #ffffff;
-  }
-
-  .arrow:active {
-    color: rgba(49, 109, 194, 0.7);
-  }
-
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .header__logo:hover {
-    opacity: 0.7;
-  }
-
-  .header__logo:active {
-    opacity: 0.2;
-  }
-
-  .header__menu:hover {
-    color: #ffffff;
-    background-color: #316dc2;
-  }
-
-  .header__menu:hover .header__menu-circle {
-    background-color: #ffffff;
-  }
-
-  .header__menu:hover .header__menu-circle::before {
-    border-color: #316dc2;
-  }
-
-  .header__menu:hover .header__menu-circle::after {
-    background-color: #316dc2;
-  }
-
-  .header.is-open .header__menu:hover {
-    color: #316dc2;
-    background-color: #ffffff;
-  }
-
-  .header__menu-circle:hover {
-    background-color: #316dc2;
-  }
-
-  .nav__link:hover {
-    color: #ffffff;
-  }
-
-  .nav__subnav-list .nav__link:hover {
-    color: #ffffff;
   }
 }
 
