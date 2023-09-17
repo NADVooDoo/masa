@@ -4,6 +4,8 @@ import {Form} from './modules/form-validate/form';
 import {Menu} from './modules/menu';
 import {getHeroSlider} from './modules/init-hero-swiper';
 import {getProgramsSlider} from './modules/init-programs-swiper';
+import {getNewsSlider} from './modules/init-news-swiper';
+import {getNewsMenuSelection} from './modules/news/menu-news';
 
 // ---------------------------------
 
@@ -29,6 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     getProgramsSlider();
+    getNewsMenuSelection();
+    getNewsSlider();
   });
 });
 

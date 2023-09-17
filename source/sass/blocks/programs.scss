@@ -5,11 +5,11 @@
 .programs__container {
   position: relative;
   padding-top: 62px;
-  padding-bottom: 120px;
+  padding-bottom: 116px;
 
   @include vp-1199 {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 97px;
   }
 
   @include vp-767 {
@@ -60,7 +60,7 @@
 }
 
 .programs__slider {
-  margin: 0 0 40px;
+  margin: 0 0 35px;
 
   @include vp-1199 {
     overflow: visible;
@@ -234,7 +234,7 @@
 .programs__arrows {
   display: flex;
   margin-left: auto;
-  gap: 0 10px;
+  gap: 0 3px;
 
   @include vp-767 {
     gap: 0 8px;

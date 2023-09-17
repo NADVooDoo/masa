@@ -646,3 +646,9 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   overflow: hidden;
 }
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background-color: #316dc2;
+  opacity: 1;
+}
