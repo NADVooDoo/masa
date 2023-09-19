@@ -7,6 +7,8 @@ import {getProgramsSlider} from './modules/init-programs-swiper';
 import {getNewsSlider} from './modules/init-news-swiper';
 import {getNewsMenuSelection} from './modules/news/menu-news';
 import {initAccordions} from './modules/init-faq-tabs';
+import {getReviewsSlider} from './modules/init-reviews-swiper';
+import {getMap} from './modules/init-contacts-map';
 
 // ---------------------------------
 
@@ -35,6 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
     getNewsMenuSelection();
     getNewsSlider();
     initAccordions();
+    getReviewsSlider();
+    getMap();
   });
 });
 

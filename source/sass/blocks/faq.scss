@@ -263,7 +263,6 @@
   @include disabled {
     background-color: $color-mischka;
     border-color: $color-mischka;
-
     pointer-events: none;
 
     &::before,
