@@ -9,6 +9,7 @@ import {getNewsMenuSelection} from './modules/news/menu-news';
 import {initAccordions} from './modules/init-faq-tabs';
 import {getReviewsSlider} from './modules/init-reviews-swiper';
 import {getMap} from './modules/init-contacts-map';
+import {CustomSelect} from './vendor/select/custom-select';
 
 // ---------------------------------
 
@@ -33,6 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const select = new CustomSelect();
+    select.init();
     getProgramsSlider();
     getNewsMenuSelection();
     getNewsSlider();

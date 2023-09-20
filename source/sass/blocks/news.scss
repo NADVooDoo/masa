@@ -185,7 +185,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -16px;
+    top: -15px;
     left: 0;
     width: 16px;
     height: 16px;
@@ -195,7 +195,7 @@
   &::after {
     content: "";
     position: absolute;
-    right: -16px;
+    right: -15px;
     bottom: 0;
     width: 16px;
     height: 16px;
@@ -218,7 +218,7 @@
   &::after {
     content: "";
     position: absolute;
-    right: -16px;
+    right: -15px;
     bottom: 0;
     width: 16px;
     height: 16px;
@@ -230,6 +230,7 @@
     padding: 5px 16px 1px 0;
     font-size: 20px;
     line-height: 24px;
+    margin-top: -1px;
   }
 
   @include vp-767 {
@@ -253,7 +254,7 @@
   &::before {
     content: "";
     position: absolute;
-    right: -16px;
+    right: -15px;
     bottom: 0;
     width: 16px;
     height: 16px;
@@ -262,10 +263,11 @@
 
   @include vp-1199 {
     padding: 7px 28px 10px 0;
+    margin-top: -1px;
   }
 
   @include vp-767 {
-    padding: 13px 10px 9px 0;
+    padding: 13px 10px 9px 1px;
   }
 }
 
@@ -290,7 +292,7 @@
   flex-shrink: 0;
 
   &::before {
-    right: -16px;
+    right: -15px;
 
     @include vp-1199 {
       right: -9px;
@@ -390,6 +392,7 @@
     max-width: 291px;
     padding-top: 13px;
     padding-bottom: 2px;
+    margin-top: -1px;
   }
 
   p {
