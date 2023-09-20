@@ -1,6 +1,9 @@
 const getNewsMenuSelection = () => {
   const ACTIVE_CLASS = 'is-active';
   const menu = document.querySelector('[data-news-menu]');
+  if (!menu) {
+    return;
+  }
   const buttons = menu.querySelectorAll('[data-news-menu-button]');
 
   menu.addEventListener('click', (evt) => {

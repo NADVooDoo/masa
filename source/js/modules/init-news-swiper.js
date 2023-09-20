@@ -36,6 +36,7 @@ const getNewsSlider = () => {
         prevEl: '[data-news-prev]',
       },
       pagination: {
+        bulletActiveClass: 'news__pagination-bullet-active',
         el: '[data-news-pagination]',
         clickable: true,
         renderBullet: (index, className) => {

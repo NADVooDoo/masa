@@ -20,6 +20,7 @@ const getProgramsSlider = () => {
         },
       },
       scrollbar: {
+        // dragClass: 'programs__scrollbar-drag',
         el: '[data-programs-scrollbar]',
       },
       navigation: {

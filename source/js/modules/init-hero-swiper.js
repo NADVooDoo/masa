@@ -11,7 +11,9 @@ const getHeroSlider = () => {
         disableOnInteraction: false,
       },
       allowTouchMove: isMobileDevice(),
+      slideActiveClass: 'hero__item--active',
       pagination: {
+        bulletActiveClass: 'hero__pagination-bullet-active',
         el: '[data-hero-pagination]',
         clickable: true,
         renderBullet: (index, className) => {
