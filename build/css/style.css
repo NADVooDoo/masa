@@ -4107,7 +4107,7 @@ button,
   gap: 0 3px;
 }
 
-.programs__scrollbar .swiper-scrollbar-drag {
+.programs__scrollbar div {
   background-color: #316dc2;
 }
 
@@ -4985,7 +4985,7 @@ button,
   background-color: rgba(49, 109, 194, 0.2);
 }
 
-.reviews__scrollbar .swiper-scrollbar-drag {
+.reviews__scrollbar div {
   background-color: #316dc2;
 }
 
@@ -6210,7 +6210,7 @@ button,
   }
 
   .hero__content .hero__pagination::before {
-    right: -8px;
+    right: -7px;
     width: 8px;
     height: 8px;
   }
