@@ -5,7 +5,6 @@ const getProgramsSlider = () => {
   if (document.querySelector('[data-programs-slider]')) {
     return new Swiper('[data-programs-slider]', {
       allowTouchMove: isMobileDevice(),
-      autoHeight: true,
       breakpoints: {
         0: {
           slidesPerView: 1,

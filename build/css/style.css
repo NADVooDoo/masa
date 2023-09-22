@@ -5706,6 +5706,7 @@ button,
 
   .programs__card {
     padding-right: 41px;
+    margin-top: -154px;
   }
 
   .programs__card-header {
@@ -6415,6 +6416,7 @@ button,
 
   .programs__card {
     padding: 18px 10px;
+    margin-top: -146px;
   }
 
   .programs__card-header {
