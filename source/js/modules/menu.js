@@ -65,7 +65,6 @@ export class Menu {
   _onDocumentKeydown(evt) {
     if (evt.key === 'Escape') {
       this._closeMenu();
-      document.querySelector('[data-burger]').blur();
     }
   }
 
@@ -93,5 +92,5 @@ function menuDropdown(event) {
 const dropdownButtons = document.querySelectorAll('[data-dropdown-button]');
 
 dropdownButtons.forEach((button) => {
-  button.addEventListener('click', menuDropdown);
+  button.addEventListener('focus', menuDropdown); // Изменили 'click' на 'focus'
 });
