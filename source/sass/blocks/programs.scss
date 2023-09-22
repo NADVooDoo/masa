@@ -100,7 +100,7 @@
 
   picture {
     object-fit: cover;
-    position: absolute;
+    // position: absolute;
     z-index: -2;
     width: 100%;
     height: auto;
@@ -120,6 +120,7 @@
 .programs__card {
   position: relative;
   padding: 20px;
+  margin-top: -160px;
 
   @include vp-1199 {
     padding-right: 41px;

@@ -4058,7 +4058,6 @@ button,
 .programs__item picture {
   -o-object-fit: cover;
   object-fit: cover;
-  position: absolute;
   z-index: -2;
   width: 100%;
   height: auto;
@@ -4071,6 +4070,7 @@ button,
 .programs__card {
   position: relative;
   padding: 20px;
+  margin-top: -160px;
 }
 
 .programs__card-header {
