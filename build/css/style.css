@@ -4061,7 +4061,10 @@ button,
 }
 
 .programs__item img {
+  height: 100%;
   border-radius: 12px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .programs__card {
