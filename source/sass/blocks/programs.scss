@@ -88,11 +88,10 @@
   height: auto;
 
   picture {
-    position: relative;
     object-fit: cover;
     z-index: -2;
     width: 100%;
-    height: auto;
+    height: 100%;
 
     &::before {
       content: "";
