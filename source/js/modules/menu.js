@@ -92,5 +92,5 @@ function menuDropdown(event) {
 const dropdownButtons = document.querySelectorAll('[data-dropdown-button]');
 
 dropdownButtons.forEach((button) => {
-  button.addEventListener('focus', menuDropdown); // Изменили 'click' на 'focus'
+  button.addEventListener('click', menuDropdown);
 });
