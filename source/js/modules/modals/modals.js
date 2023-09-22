@@ -160,14 +160,22 @@ export class Modals {
       this._openCallback();
     }
 
-    if (this._lockFocus) {
-      this._focusLock.lock('.modal.is-active', this._startFocus);
-    }
-
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+
+      if (this._lockFocus) {
+        this._focusLock.lock('.modal.is-active', this._startFocus);
+
+        // Установим фокус на поле input с атрибутом [data-focus], если оно есть внутри модального окна
+        const inputWithFocus = modal.querySelector('[data-focus]');
+        if (inputWithFocus) {
+          setTimeout(() => { // Добавляем задержку перед установкой фокуса
+            inputWithFocus.focus();
+          }, 100);
+        }
+      }
     }, this._eventTimeout);
   }
 

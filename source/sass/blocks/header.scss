@@ -100,6 +100,24 @@
     }
   }
 
+  @include focus-within {
+    outline: none;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+
+    .header__menu-circle {
+      background-color: $color-default-white;
+    }
+
+    .header__menu-circle::before {
+      border-color: $color-cerulean-blue;
+    }
+
+    .header__menu-circle::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
   @include vp-1199 {
     margin-left: auto;
   }

@@ -65,6 +65,7 @@ export class Menu {
   _onDocumentKeydown(evt) {
     if (evt.key === 'Escape') {
       this._closeMenu();
+      document.querySelector('[data-burger]').blur();
     }
   }
 
